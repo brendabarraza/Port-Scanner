@@ -1,0 +1,14 @@
+import socket 
+
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
+host = input("IP: ")
+port = ("Port: ")
+
+def portScanner(port):
+    if s.connect_ex((host, port)):
+        print("port closed")
+    else:
+        print("port open")
+
+portScanner(port)
